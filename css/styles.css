@@ -95,6 +95,8 @@ ul {
 .contacts .item {
   margin: 0;
   padding: 0;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--primary-text-color);
   font-family: Roboto;
   font-style: normal;
@@ -103,26 +105,40 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
-
 .contacts-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+.contacts-icon.mail {
   width: 16px;
   height: 11px;
-  fill: #757575;
+}
+.contacts-icon.phone {
+  width: 10px;
+  height: 15px;
+}
+.contacts .item:hover,
+.contacts .item:focus {
+  color: var(--accent-color);
 }
 .contacts .item + .item {
   margin-left: 50px;
 }
-.contacts a:hover,
-.contacts a:focus {
-  color: var(--accent-color);
-}
+
 .hero-container {
   padding-top: 200px;
   padding-bottom: 200px;
 }
 .hero {
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8)),
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
     url(../image/header.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -267,11 +283,6 @@ ul {
 .team-foto {
   margin-bottom: 30px;
 }
-/* Добавления hover к ссылкам на соцсети */
-.social-list .link:hover,
-.social-list .link:focus {
-  color: var(--accent-color);
-}
 .social-list {
   display: flex;
   justify-content: center;
@@ -282,10 +293,46 @@ ul {
 }
 .social-list .link {
   text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  color: #afb1b8;
+}
+.social-list-icon {
+  fill: currentColor;
+}
+.social-list .link:hover,
+.social-list .link:focus {
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
 }
 .customers {
   margin-top: 0;
   margin-bottom: 0;
+  padding: 0;
+}
+.customers .link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  content: "";
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #afb1b8;
+}
+.customers-list-icon {
+  fill: currentColor;
+}
+.customers .link:hover,
+.customers .link:focus {
+  color: var(--accent-color);
+  border: 1px solid #2196f3;
 }
 /* footer */
 footer {
